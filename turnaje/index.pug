@@ -1,0 +1,33 @@
+doctype html
+html
+    head
+        title Seznam turnajů
+        link(rel='stylesheet'
+href='https://getbootstrap.com/docs/4.4/dist/css/bootstrap.min.css')
+    body
+        header.jumbotron-fluid.bg-success.p-3.m-5
+            h1.text-center.text-white Seznam turnajů
+        main.container
+            table(class="table table-bordered")
+                thead
+                    tr.bg-success.text-light
+                        th Název Turnaje
+                        th Výhra
+                        th Druh sportu/hry
+                        th Datum oznámení
+                        th Datum konání
+                tbody
+                    each ukol in turnaje
+                        tr
+                            td #{ukol.name}
+                            td #{ukol.money}
+                            td #{ukol.game}
+                            td #{ukol.oznameni}      
+                            td #{ukol.konani}
+        footer.bg-success.p-2.container.text-white   
+            p.float-right.text-center
+                a(href="/") Zpět na formulář
+            p  &copy; 2022 - Šimon Ludvíček, IT2, SŠPU Opava
+             
+    script(src='https://code.jquery.com/jquery-3.4.1.slim.min.js')
+    script(src='https://getbootstrap.com/docs/4.4/dist/js/bootstrap.bundle.min.js')
